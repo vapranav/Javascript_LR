@@ -19,6 +19,10 @@ const y = [
 
 const mlr = new MLR(x, y);
 
+app.get("/", (req, res) => {
+  res.send("Hello!")
+})
+
 app.post('/:numparticipants/:price', (req, res) => {
       let a = new Array;
       a.push(parseInt(req.params.numparticipants));
